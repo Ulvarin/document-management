@@ -6,7 +6,7 @@ import javax.persistence.Id;
 import java.io.Serializable;
 
 /**
- * Created by maciuch on 12.06.16.
+ * Created by Ulvarin on 12.06.16.
  */
 @Embeddable
 public class EmployeeId implements Serializable {

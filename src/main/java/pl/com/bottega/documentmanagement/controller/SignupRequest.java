@@ -1,7 +1,7 @@
 package pl.com.bottega.documentmanagement.controller;
 
 /**
- * Created by maciuch on 03.07.16.
+ * Created by Ulvarin on 03.07.16.
  */
 public class SignupRequest {
 

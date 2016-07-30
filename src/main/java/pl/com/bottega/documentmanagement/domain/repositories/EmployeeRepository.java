@@ -8,7 +8,7 @@ import java.util.Collection;
 import java.util.Set;
 
 /**
- * Created by maciuch on 18.06.16.
+ * Created by Ulvarin on 18.06.16.
  */
 public interface EmployeeRepository {
 

@@ -6,7 +6,7 @@ import javax.persistence.*;
 import java.util.Date;
 
 /**
- * Created by maciuch on 12.06.16.
+ * Created by Ulvarin on 12.06.16.
  */
 @Entity
 public class Document {

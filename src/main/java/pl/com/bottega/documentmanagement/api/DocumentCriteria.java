@@ -5,7 +5,7 @@ import pl.com.bottega.documentmanagement.domain.DocumentStatus;
 import java.util.Date;
 
 /**
- * Created by maciuch on 12.06.16.
+ * Created by Ulvarin on 12.06.16.
  */
 public class DocumentCriteria {
 

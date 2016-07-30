@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Created by maciuch on 09.07.16.
+ * Created by Ulvarin on 09.07.16.
  */
 @ControllerAdvice
 public class ErrorsHandler {

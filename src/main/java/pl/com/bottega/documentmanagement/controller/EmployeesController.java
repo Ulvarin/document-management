@@ -6,7 +6,7 @@ import pl.com.bottega.documentmanagement.api.UserManager;
 import pl.com.bottega.documentmanagement.domain.EmployeeId;
 
 /**
- * Created by maciuch on 03.07.16.
+ * Created by Ulvarin on 03.07.16.
  */
 @RestController
 @RequestMapping("/employees")

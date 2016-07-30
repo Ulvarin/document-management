@@ -12,7 +12,7 @@ import pl.com.bottega.documentmanagement.domain.repositories.DocumentRepository;
 import static com.google.common.base.Preconditions.checkNotNull;
 
 /**
- * Created by maciuch on 12.06.16.
+ * Created by Ulvarin on 12.06.16.
  */
 @Service
 public class DocumentFlowProcess {

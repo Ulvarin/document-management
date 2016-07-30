@@ -3,7 +3,7 @@ package pl.com.bottega.documentmanagement.controller;
 import java.util.Set;
 
 /**
- * Created by maciuch on 27.07.16.
+ * Created by Ulvarin on 27.07.16.
  */
 public class UpdateRolesRequest {
 

@@ -20,7 +20,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 /**
- * Created by maciuch on 12.06.16.
+ * Created by Ulvarin on 12.06.16.
  */
 @Service
 @Scope(value = "session", proxyMode = ScopedProxyMode.TARGET_CLASS)

@@ -1,7 +1,7 @@
 package pl.com.bottega.documentmanagement.api;
 
 /**
- * Created by maciuch on 18.06.16.
+ * Created by Ulvarin on 18.06.16.
  */
 public class SignupResultDto {
 
