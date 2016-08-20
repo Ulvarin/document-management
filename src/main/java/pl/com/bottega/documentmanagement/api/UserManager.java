@@ -23,34 +23,29 @@ import java.util.Set;
 @Scope(value = "session", proxyMode = ScopedProxyMode.TARGET_CLASS)
 public class UserManager {
 
-
     private EmployeeRepository employeeRepository;
     private Employee currentEmployee;
     private EmployeeFactory employeeFactory;
-    private PasswordHasher passwordhasher;
+    private PasswordHasher passwordHasher;
 
-
-    @Autowired
-    public UserManager(EmployeeRepository employeeRepository, EmployeeFactory employeeFactory, PasswordHasher passwordhasher) {
+    public UserManager(EmployeeRepository employeeRepository, EmployeeFactory employeeFactory, PasswordHasher passwordHasher) {
         this.employeeRepository = employeeRepository;
         this.employeeFactory = employeeFactory;
-        this.passwordhasher = passwordhasher;
-
+        this.passwordHasher = passwordHasher;
     }
-
 
     @Transactional(isolation = Isolation.REPEATABLE_READ)
     public SignupResultDto signup(String login, String password, EmployeeId employeeId) {
         Employee employee = employeeRepository.findByEmployeeId(employeeId);
         if (employee == null)
             return setupNewAccount(login, password, employeeId);
-        else if (employee.isRegistered())
+        if (employee.isRegistered())
             return failed("employee registered");
-        else {
-            employee.setupAccount(login, password);
-            employeeRepository.save(employee);
-            return success();
-        }
+        if (employeeRepository.isLoginOccupied(login))
+            return failed("login occupied");
+        employee.setupAccount(login, password);
+        employeeRepository.save(employee);
+        return success();
     }
 
     private SignupResultDto setupNewAccount(String login, String password, EmployeeId employeeId) {
@@ -71,9 +66,8 @@ public class UserManager {
         return new SignupResultDto();
     }
 
-
     public SignupResultDto login(String login, String password) {
-        this.currentEmployee = employeeRepository.findByLoginAndPassword(login, passwordhasher.hashedPassword(password));
+        this.currentEmployee = employeeRepository.findByLoginAndPassword(login, passwordHasher.hashedPassword(password));
         if (this.currentEmployee == null)
             return failed("login or password incorrect");
         else

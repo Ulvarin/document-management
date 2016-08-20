@@ -10,6 +10,7 @@ import java.util.Set;
 /**
  * Created by Ulvarin on 18.06.16.
  */
+
 public interface EmployeeRepository {
 
     void save(Employee employee);
@@ -21,4 +22,6 @@ public interface EmployeeRepository {
     Employee findByLoginAndPassword(String login, String hashedPassword);
 
     Collection<Role> getRoles(Set<String> roleNames);
+
+    Set<Employee> findByEmployeeIds(Iterable<EmployeeId> ids);
 }
