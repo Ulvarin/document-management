@@ -7,6 +7,7 @@ package pl.com.bottega.documentmanagement.domain;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+
 @Entity
 public class Tag {
 
@@ -16,7 +17,8 @@ public class Tag {
 
     private String name;
 
-    private Tag() {}
+    private Tag() {
+    }
 
     public Tag(String name) {
         this.name = name;

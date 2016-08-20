@@ -1,6 +1,5 @@
 package pl.com.bottega.documentmanagement.infrastructure;
 
-import org.springframework.stereotype.Component;
 import pl.com.bottega.documentmanagement.api.DocumentCriteria;
 import pl.com.bottega.documentmanagement.api.DocumentDto;
 import pl.com.bottega.documentmanagement.api.DocumentSearchResults;

@@ -13,7 +13,8 @@ public class DocumentNumber {
     @NaturalId
     private String number;
 
-    private DocumentNumber() {}
+    private DocumentNumber() {
+    }
 
     public DocumentNumber(String number) {
         this.number = number;

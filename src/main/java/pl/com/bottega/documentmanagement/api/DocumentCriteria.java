@@ -6,7 +6,8 @@ import java.util.Date;
 
 /**
  * Created by Ulvarin on 12.06.16.
- */public class DocumentCriteria {
+ */
+public class DocumentCriteria {
 
     private static final Long DEFAULT_PER_PAGE = 2l;
     private static final Long DEFAULT_PAGE_NUMBER = 1l;
@@ -19,14 +20,6 @@ import java.util.Date;
     private String query;
     private Long perPage = DEFAULT_PER_PAGE;
     private Long pageNumber = DEFAULT_PAGE_NUMBER;
-
-    public void setPerPage(Long perPage) {
-        this.perPage = perPage;
-    }
-
-    public void setPageNumber(Long pageNumber) {
-        this.pageNumber = pageNumber;
-    }
 
     public DocumentStatus getStatus() {
         return status;
@@ -132,7 +125,15 @@ import java.util.Date;
         return pageNumber;
     }
 
+    public void setPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
+    }
+
     public Long getPerPage() {
         return perPage;
+    }
+
+    public void setPerPage(Long perPage) {
+        this.perPage = perPage;
     }
 }

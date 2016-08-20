@@ -17,6 +17,7 @@ public class DocumentDto {
     private Long creatorId, verificatorId;
 
     private Date createdAt, verificatedAt, updatedAt;
+
     public DocumentDto(String number, String title, String content, DocumentStatus status, Date createdAt, Date verificatedAt, Date updatedAt, Long creatorId, Long verificatorId) {
         this.number = number;
         this.title = title;

@@ -16,7 +16,8 @@ public class Employee {
 
     @EmbeddedId
     private EmployeeId employeeId;
-    private String hashedPassword;
+        private String hashedPassword;
+
     @NaturalId
     private String login;
 

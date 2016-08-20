@@ -2,7 +2,6 @@ package pl.com.bottega.documentmanagement.domain;
 
 import javax.persistence.Embeddable;
 import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
 import java.io.Serializable;
 
 /**
