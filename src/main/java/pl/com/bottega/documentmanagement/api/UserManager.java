@@ -19,6 +19,7 @@ import java.util.Set;
 /**
  * Created by Ulvarin on 12.06.16.
  */
+
 @Service
 @Scope(value = "session", proxyMode = ScopedProxyMode.TARGET_CLASS)
 public class UserManager {
@@ -90,7 +91,7 @@ public class UserManager {
     }
 
     @Transactional
-    public void createAdmin(){
+    public void createAdmin() {
         Employee employee = new Employee("admin", passwordHasher.hashedPassword("admin"), new EmployeeId(0L));
         employee.updateRoles(getRoles(Sets.newHashSet("ADMIN")));
         employeeRepository.save(employee);

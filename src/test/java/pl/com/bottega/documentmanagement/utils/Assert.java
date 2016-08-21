@@ -15,6 +15,4 @@ public class Assert {
         assertTrue(String.format("Expected %1tc, got %2tc", expected, actual), Math.abs(actual.getTime() - expected.getTime()) < EPS);
     }
 
-
-
 }
