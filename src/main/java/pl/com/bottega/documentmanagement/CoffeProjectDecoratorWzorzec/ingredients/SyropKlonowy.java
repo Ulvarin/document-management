@@ -1,7 +1,7 @@
-package pl.com.bottega.documentmanagement.CoffeProject.ingredients;
+package pl.com.bottega.documentmanagement.CoffeProjectDecoratorWzorzec.ingredients;
 
-import pl.com.bottega.documentmanagement.CoffeProject.Coffe;
-import pl.com.bottega.documentmanagement.CoffeProject.CoffeDecorator;
+import pl.com.bottega.documentmanagement.CoffeProjectDecoratorWzorzec.Coffe;
+import pl.com.bottega.documentmanagement.CoffeProjectDecoratorWzorzec.CoffeDecorator;
 
 /**
  * Created by ulvar on 21.08.2016.

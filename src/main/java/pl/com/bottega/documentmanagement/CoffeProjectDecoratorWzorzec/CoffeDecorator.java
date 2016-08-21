@@ -1,4 +1,4 @@
-package pl.com.bottega.documentmanagement.CoffeProject;
+package pl.com.bottega.documentmanagement.CoffeProjectDecoratorWzorzec;
 
 /**
  * Created by ulvar on 21.08.2016.

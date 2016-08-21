@@ -1,12 +1,12 @@
-package pl.com.bottega.documentmanagement.CoffeProject.app;
+package pl.com.bottega.documentmanagement.CoffeProjectDecoratorWzorzec.app;
 
-import pl.com.bottega.documentmanagement.CoffeProject.Coffe;
-import pl.com.bottega.documentmanagement.CoffeProject.ingredients.Czekolada;
-import pl.com.bottega.documentmanagement.CoffeProject.ingredients.Rumianek;
-import pl.com.bottega.documentmanagement.CoffeProject.ingredients.SyropKlonowy;
-import pl.com.bottega.documentmanagement.CoffeProject.sizes.Big;
-import pl.com.bottega.documentmanagement.CoffeProject.sizes.Medium;
-import pl.com.bottega.documentmanagement.CoffeProject.sizes.Small;
+import pl.com.bottega.documentmanagement.CoffeProjectDecoratorWzorzec.Coffe;
+import pl.com.bottega.documentmanagement.CoffeProjectDecoratorWzorzec.ingredients.Czekolada;
+import pl.com.bottega.documentmanagement.CoffeProjectDecoratorWzorzec.ingredients.Rumianek;
+import pl.com.bottega.documentmanagement.CoffeProjectDecoratorWzorzec.ingredients.SyropKlonowy;
+import pl.com.bottega.documentmanagement.CoffeProjectDecoratorWzorzec.sizes.Big;
+import pl.com.bottega.documentmanagement.CoffeProjectDecoratorWzorzec.sizes.Medium;
+import pl.com.bottega.documentmanagement.CoffeProjectDecoratorWzorzec.sizes.Small;
 
 /**
  * Created by ulvar on 21.08.2016.
