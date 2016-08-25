@@ -7,7 +7,7 @@ import java.util.Scanner;
  */
 public class MathApp {
 
-    public double inPutLine() {
+    public double inputDouble() {
         Scanner scanner = new Scanner(System.in);
 
         double input = 0;
@@ -31,7 +31,7 @@ public class MathApp {
                 "3. Oblicz cosinusX " + "\n" +
                 "4. Oblicz 2 do potęgi ");
 
-        double choice = inPutLine();
+        double choice = inputDouble();
 
         if (choice == 1) {
             System.out.println("Wybrałeś obliczanie równania kwadratowego, podaj dane" + "\n");
@@ -46,7 +46,7 @@ public class MathApp {
             System.out.println("Wybrałeś obliczanie dwójki do potęgi, podaj potęgę." + "\n");
             twoSquaredX();
         } else {
-            System.out.println("Please input correct number 1-4");
+            System.out.println("Wprowadź liczbę z przedziału 1-4");
             printOptions();
 
         }
@@ -54,7 +54,7 @@ public class MathApp {
 
     }
 
-    public void tryAgain() {
+    public void wantToTryAgain() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Czy chcesz spróbować jeszcze raz?  TAK / NIE");
         String choice = sc.nextLine();
@@ -74,7 +74,7 @@ public class MathApp {
 
     public void squareEquationXXX() {
         System.out.println("Podaj a");
-        double a = inPutLine();
+        double a = inputDouble();
 
         if (a == 0) {
             System.out.println(" a nie może równać się zero \n ");
@@ -82,9 +82,9 @@ public class MathApp {
         }
 
         System.out.println("Podaj b");
-        double b = inPutLine();
+        double b = inputDouble();
         System.out.println("Podaj c");
-        double c = inPutLine();
+        double c = inputDouble();
         double temp = Math.sqrt(b * b - 4 * a * c);
         double roz1 = (-b + temp) / (2 * a);
         double roz2 = (-b - temp) / (2 * a);
@@ -100,33 +100,33 @@ public class MathApp {
             System.out.println("Równanie nie posiada rozwiazań ");
 
         }
-        tryAgain();
+        wantToTryAgain();
     }
 
     public void sinusX() {
-        double degrees = inPutLine();
+        double degrees = inputDouble();
         double radians = Math.toRadians(degrees);
         double angleSinus = Math.sin(radians);
         System.out.format("Wartość Pi wynosi %.4f%n", Math.PI);
         System.out.format("Sinus kąta %.1f  to %.4f%n", degrees, angleSinus);
-        tryAgain();
+        wantToTryAgain();
 
     }
 
     public void cosinusX() {
-        double degrees = inPutLine();
+        double degrees = inputDouble();
         double radians = Math.toRadians(degrees);
         double angleCosinus = Math.cos(radians);
         System.out.format("Wartość Pi wynosi %.4f%n", Math.PI);
         System.out.format("Cosinus kąta %.1f  to %.4f%n", degrees, angleCosinus);
-        tryAgain();
+        wantToTryAgain();
     }
 
     public void twoSquaredX() {
-        double square = inPutLine();
+        double square = inputDouble();
         double outcome = Math.pow(2, square);
         System.out.format("2 do potęgi " + square + " to " + outcome + "%n");
-        tryAgain();
+        wantToTryAgain();
 
     }
 
