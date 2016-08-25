@@ -9,6 +9,8 @@ import org.mockito.runners.MockitoJUnitRunner;
 import pl.com.bottega.documentmanagement.domain.*;
 import pl.com.bottega.documentmanagement.domain.repositories.DocumentRepository;
 import pl.com.bottega.documentmanagement.domain.repositories.EmployeeRepository;
+import pl.com.bottega.documentmanagement.infrastructure.MailingFacadeImpl;
+import pl.com.bottega.documentmanagement.infrastructure.PrintSystemFacadeImpl;
 
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -53,9 +55,19 @@ public class DocumentFlowProcessTest {
     @Mock
     private Employee employee;
 
+    @Mock
+    private MailingFacade mailingFacade;
+
+    @Mock
+    private PrintSystemFacade printSystemFacade;
+
+    @Mock
+    private HRSystemFacade hrSystemFacade;
+
     @Before
     public void setUp() throws Exception {
-        documentFlowProcess = new DocumentFlowProcess(documentRepository, userManager, documentFactory, employeeRepository);
+        documentFlowProcess = new DocumentFlowProcess(documentRepository, userManager,
+                documentFactory, employeeRepository, hrSystemFacade, printSystemFacade, mailingFacade);
     }
 
     @Test
@@ -112,6 +124,16 @@ public class DocumentFlowProcessTest {
 
         //then
         verify(document).publish(employee, employeeIds.stream().map(Employee::new).collect(Collectors.toSet()));
+    }
+
+    @Test
+    public void shouldSendPrintRequestForEmployeesWithoutEmail() {
+
+    }
+
+    @Test
+    public void shouldSendPublicationEmailsToEmployeesWithEmail() {
+
     }
 
     @Test

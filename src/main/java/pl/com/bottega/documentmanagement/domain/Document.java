@@ -79,7 +79,7 @@ public class Document {
     private int pagesCount() {
         return content.length() / CHARS_PER_PAGE +
                 (content.length() % CHARS_PER_PAGE == 0 ? 0 : 1);
-        //return Math.ceil((double) content.length()) / CHARS_PER_PAGE);
+        //return MathApp.ceil((double) content.length()) / CHARS_PER_PAGE);
     }
 
     public void change(String title, String content) {

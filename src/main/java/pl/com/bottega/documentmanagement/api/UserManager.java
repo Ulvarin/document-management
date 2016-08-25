@@ -21,7 +21,7 @@ import java.util.Set;
  */
 
 @Service
-@Scope(value = "session", proxyMode = ScopedProxyMode.TARGET_CLASS)
+//@Scope(value = "session", proxyMode = ScopedProxyMode.TARGET_CLASS)
 public class UserManager {
 
     private EmployeeRepository employeeRepository;
