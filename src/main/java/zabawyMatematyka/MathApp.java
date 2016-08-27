@@ -85,14 +85,14 @@ public class MathApp {
         double b = inputDouble();
         System.out.println("Podaj c");
         double c = inputDouble();
-        double temp = Math.sqrt(b * b - 4 * a * c);
-        double roz1 = (-b + temp) / (2 * a);
-        double roz2 = (-b - temp) / (2 * a);
-        if (temp > 0) {
+        double delta = Math.sqrt(b * b - 4 * a * c);
+        double roz1 = (-b + delta) / (2 * a);
+        double roz2 = (-b - delta) / (2 * a);
+        if (delta > 0) {
             System.out.println("Równanie ma dwa rozwiazania " + roz1 + " i " + roz2);
 
 
-        } else if (temp == 0) {
+        } else if (delta == 0) {
             System.out.println("Równanie ma jedno rozwiazanie " + (-b / 2 * a));
 
 
