@@ -4,14 +4,17 @@ import com.google.common.collect.Sets;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
-import org.mockito.internal.matchers.NotNull;
+
 import org.mockito.runners.MockitoJUnitRunner;
+import pl.com.bottega.documentmanagement.domain.events.DocumentListener;
+
 
 import java.util.Date;
 import java.util.Set;
 
 import static junit.framework.TestCase.*;
 import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.verify;
 import static pl.com.bottega.documentmanagement.utils.Assert.assertDatesEqual;
 
 
@@ -32,6 +35,8 @@ public class DocumentTest {
 
     @Mock
     private PrintCostCalculator printCostCalculator;
+
+
 
     private String anyContent = "test content";
 
@@ -153,6 +158,30 @@ public class DocumentTest {
         assertDatesEqual(new Date(), document.publishedAt());
     }
 
+
+
+    @Test
+    public void shouldNotifyAboutPublishing(){
+        //given
+        Document document = new Document(anyNumber, anyContent, anyTitle, anyEmployee, printCostCalculator);
+        document.verify(anyEmployee);
+        DocumentListener firstListener = mock(DocumentListener.class);
+        DocumentListener secondListener = mock(DocumentListener.class);
+        document.subscribeDocumentListener(firstListener);
+        document.subscribeDocumentListener(secondListener);
+
+        //when
+        document.publish(anyEmployee, Sets.newHashSet(anyEmployee));
+
+        //then
+
+        verify(firstListener).published(document);
+        verify(secondListener).published(document);
+
+
+    }
+
+
     @Test(expected = IllegalArgumentException.class)
     public void shouldNotAllowPublishingForNoEmployees() {
         //given
@@ -219,5 +248,6 @@ public class DocumentTest {
         document.confirm(otherEmployee);
 
     }
+
 
 }

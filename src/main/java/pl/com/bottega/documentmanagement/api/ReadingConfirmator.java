@@ -4,7 +4,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import pl.com.bottega.documentmanagement.domain.Document;
 import pl.com.bottega.documentmanagement.domain.DocumentNumber;
-import pl.com.bottega.documentmanagement.domain.Employee;
 import pl.com.bottega.documentmanagement.domain.EmployeeId;
 import pl.com.bottega.documentmanagement.domain.repositories.DocumentRepository;
 import pl.com.bottega.documentmanagement.domain.repositories.EmployeeRepository;
@@ -13,7 +12,8 @@ import static com.google.common.base.Preconditions.checkNotNull;
 
 /**
  * Created by Ulvarin on 12.06.16.
- */@Service
+ */
+@Service
 public class ReadingConfirmator {
 
     private DocumentRepository documentRepository;

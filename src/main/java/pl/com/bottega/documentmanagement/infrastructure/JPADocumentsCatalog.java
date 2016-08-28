@@ -73,7 +73,7 @@ public class JPADocumentsCatalog implements DocumentsCatalog {
         Query jpaCountQuery = entityManager.createQuery(countQuery);
 
         long first = (documentCriteria.getPageNumber() - 1) * documentCriteria.getPerPage();
-        jpaQuery.setFirstResult((int)first);
+        jpaQuery.setFirstResult((int) first);
         jpaQuery.setMaxResults(documentCriteria.getPerPage().intValue());
 
         return new DocumentSearchResults(jpaQuery.getResultList(),

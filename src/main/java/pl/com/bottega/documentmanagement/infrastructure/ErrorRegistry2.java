@@ -8,10 +8,6 @@ import java.util.List;
  */
 public class ErrorRegistry2 {
 
-    private static class SingletonHolder {
-        private static final ErrorRegistry2 INSTANCE = new ErrorRegistry2();
-    }
-
     private List<String> errors = new LinkedList<>();
 
     private ErrorRegistry2() {
@@ -24,6 +20,10 @@ public class ErrorRegistry2 {
 
     public void registerError(String error) {
         errors.add(error);
+    }
+
+    private static class SingletonHolder {
+        private static final ErrorRegistry2 INSTANCE = new ErrorRegistry2();
     }
 
 }

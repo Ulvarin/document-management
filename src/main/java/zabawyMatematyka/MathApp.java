@@ -86,7 +86,6 @@ public class MathApp {
         System.out.println("Podaj c");
         double c = inputDouble();
         double delta = Math.sqrt(b * b - 4 * a * c);
-
         double roz1 = (-b + delta) / (2 * a);
         double roz2 = (-b - delta) / (2 * a);
         if (delta > 0) {

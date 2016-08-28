@@ -9,17 +9,16 @@ import java.util.List;
 public class ErrorRegistry {
 
     private static ErrorRegistry singleton;
+    private List<String> errors = new LinkedList<>();
 
     private ErrorRegistry() {
 
     }
 
-    private List<String> errors = new LinkedList<>();
-
     public static ErrorRegistry getInstance() {
         if (singleton == null)
             synchronized (ErrorRegistry.class) {
-                if(singleton == null)
+                if (singleton == null)
                     singleton = new ErrorRegistry();
             }
         return singleton;

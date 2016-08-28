@@ -9,13 +9,11 @@ public abstract class SpringCommand implements Command {
     private ApplicationContext applicationContext;
 
 
-
-
     public void setApplicationContext(ApplicationContext applicationContext) {
         this.applicationContext = applicationContext;
     }
 
-    public <T> T getBean(Class<T> beanClass){
+    public <T> T getBean(Class<T> beanClass) {
         return applicationContext.getBean(beanClass);
     }
 }

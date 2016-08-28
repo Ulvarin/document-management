@@ -5,6 +5,8 @@ import com.google.common.base.Objects;
 import javax.persistence.*;
 import java.util.Date;
 
+import static pl.com.bottega.documentmanagement.domain.Employee_.employeeId;
+
 /**
  * Created by ulvar on 20.08.2016.
  */
@@ -77,5 +79,9 @@ public class Reader {
     public void confirm(Employee confirmator) {
         confirm();
         this.confirmedBy = confirmator;
+    }
+
+    public EmployeeId employeeId() {
+        return employee.employeeId();
     }
 }

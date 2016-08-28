@@ -12,16 +12,16 @@ public abstract class ConsoleApplication {
     protected Scanner scanner = new Scanner(System.in);
 
 
-        public void run() {
-            while (true) {
-                printMenu();
-                String cmd = getCommand();
-                if (cmd.equals("quit"))
-                    return;
-                execute(cmd);
+    public void run() {
+        while (true) {
+            printMenu();
+            String cmd = getCommand();
+            if (cmd.equals("quit"))
+                return;
+            execute(cmd);
 
-            }
         }
+    }
 
 
     private void printMenu() {
@@ -45,15 +45,10 @@ public abstract class ConsoleApplication {
     }
 
 
-
-
     protected abstract CommandFactory commandFactory();
 
 
     protected abstract Collection<String> menuItems();
-
-
-
 
 
 }

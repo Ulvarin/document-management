@@ -23,7 +23,7 @@ public class HRSystemFacadeImpl implements HRSystemFacade {
             employeeDetails.setLastName("Nowak");
             employeeDetails.setAddress("Północna 13");
             employeeDetails.setEmail("jan.nowak@gmail.com");
-            return  employeeDetails;
+            return employeeDetails;
         }).collect(Collectors.toSet());
     }
 

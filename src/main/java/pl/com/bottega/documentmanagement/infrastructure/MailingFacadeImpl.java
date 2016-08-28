@@ -3,9 +3,7 @@ package pl.com.bottega.documentmanagement.infrastructure;
 import org.springframework.stereotype.Component;
 import pl.com.bottega.documentmanagement.api.EmployeeDetails;
 import pl.com.bottega.documentmanagement.api.MailingFacade;
-import pl.com.bottega.documentmanagement.api.PrintSystemFacade;
 import pl.com.bottega.documentmanagement.domain.Document;
-import sun.misc.Contended;
 
 import java.util.Set;
 import java.util.logging.Logger;

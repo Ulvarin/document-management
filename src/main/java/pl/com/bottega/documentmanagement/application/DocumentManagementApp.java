@@ -12,29 +12,30 @@ import java.util.Scanner;
 /**
  * Created by ulvar on 21.08.2016.
  */
-public class DocumentManagementApp extends ConsoleApplication{
+public class DocumentManagementApp extends ConsoleApplication {
 
     private ApplicationContext applicationContext;
 
-    public DocumentManagementApp(){
+    public DocumentManagementApp() {
         applicationContext = new ClassPathXmlApplicationContext(new String[]{"application.xml"});
     }
 
+    public static void main(String[] args) {
+        new DocumentManagementApp().promptLogin();
+    }
 
-
-    private void promptLogin(){
+    private void promptLogin() {
         System.out.print("Login: ");
         String login = new Scanner(System.in).nextLine();
         System.out.print("Password: ");
         String password = new Scanner(System.in).nextLine();
         UserManager userManager = applicationContext.getBean(UserManager.class);
         SignupResultDto signupResultDto = userManager.login(login, password);
-        if(!signupResultDto.isSuccess())
+        if (!signupResultDto.isSuccess())
             System.out.println(signupResultDto.getFailureReason());
-            promptLogin();
+        promptLogin();
 
     }
-
 
     @Override
     protected CommandFactory commandFactory() {
@@ -45,19 +46,13 @@ public class DocumentManagementApp extends ConsoleApplication{
     protected Collection<String> menuItems() {
 
 
-
         return Lists.newArrayList(
-        "1. create doc",
-        "2. search doc",
-        "3. edit doc",
-        "4. verify doc"
+                "1. create doc",
+                "2. search doc",
+                "3. edit doc",
+                "4. verify doc"
         );
 
-        }
-
-
-    public static void main(String[] args){
-        new DocumentManagementApp().promptLogin();
     }
 
 }
