@@ -1,12 +1,12 @@
-package pl.com.bottega.documentmanagement.CoffeProjectDecoratorWzorzec.app;
+package funWithJava.CoffeProjectDecoratorWzorzec.app;
 
-import pl.com.bottega.documentmanagement.CoffeProjectDecoratorWzorzec.Coffe;
-import pl.com.bottega.documentmanagement.CoffeProjectDecoratorWzorzec.ingredients.Czekolada;
-import pl.com.bottega.documentmanagement.CoffeProjectDecoratorWzorzec.ingredients.Rumianek;
-import pl.com.bottega.documentmanagement.CoffeProjectDecoratorWzorzec.ingredients.SyropKlonowy;
-import pl.com.bottega.documentmanagement.CoffeProjectDecoratorWzorzec.sizes.Big;
-import pl.com.bottega.documentmanagement.CoffeProjectDecoratorWzorzec.sizes.Medium;
-import pl.com.bottega.documentmanagement.CoffeProjectDecoratorWzorzec.sizes.Small;
+import funWithJava.CoffeProjectDecoratorWzorzec.Coffe;
+import funWithJava.CoffeProjectDecoratorWzorzec.ingredients.Czekolada;
+import funWithJava.CoffeProjectDecoratorWzorzec.ingredients.Rumianek;
+import funWithJava.CoffeProjectDecoratorWzorzec.ingredients.SyropKlonowy;
+import funWithJava.CoffeProjectDecoratorWzorzec.sizes.Big;
+import funWithJava.CoffeProjectDecoratorWzorzec.sizes.Medium;
+import funWithJava.CoffeProjectDecoratorWzorzec.sizes.Small;
 
 /**
  * Created by ulvar on 21.08.2016.

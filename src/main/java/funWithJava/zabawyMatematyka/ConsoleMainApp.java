@@ -1,4 +1,4 @@
-package zabawyMatematyka;
+package funWithJava.zabawyMatematyka;
 
 /**
  * Created by ulvar on 25.08.2016.

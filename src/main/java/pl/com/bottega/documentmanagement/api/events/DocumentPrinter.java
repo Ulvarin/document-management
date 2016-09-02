@@ -16,7 +16,6 @@ import java.util.stream.Collectors;
 /**
  * Created by ulvar on 27.08.2016.
  */
-
 public class DocumentPrinter implements DocumentListener {
 
     private PrintSystemFacade printSystemFacade;

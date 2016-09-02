@@ -1,4 +1,4 @@
-package zabawyMatematyka;
+package funWithJava.zabawyMatematyka;
 
 import java.util.Scanner;
 

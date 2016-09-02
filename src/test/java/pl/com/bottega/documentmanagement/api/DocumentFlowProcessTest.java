@@ -22,6 +22,7 @@ import static org.mockito.Mockito.when;
 /**
  * Created by maciuch on 17.08.16.
  */
+
 @RunWith(MockitoJUnitRunner.class)
 public class DocumentFlowProcessTest {
 

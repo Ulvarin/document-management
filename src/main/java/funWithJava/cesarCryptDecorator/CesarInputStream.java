@@ -1,4 +1,4 @@
-package cesarCryptDecorator;
+package funWithJava.cesarCryptDecorator;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -10,7 +10,7 @@ public class CesarInputStream extends InputStream {
     private int key;
     private InputStream anyStream;
 
-    public CesarInputStream( InputStream anyStream,int key) {
+    public CesarInputStream(InputStream anyStream, int key) {
         this.anyStream = anyStream;
         this.key = key;
     }
@@ -20,10 +20,9 @@ public class CesarInputStream extends InputStream {
         int result = anyStream.read();
 
 
-        if(result == -1) {
-        return -1;
-        }
-        else {
+        if (result == -1) {
+            return -1;
+        } else {
             result = result - key;
             return result;
 
@@ -31,14 +30,6 @@ public class CesarInputStream extends InputStream {
 
 
     }
-
-
-
-
-
-
-
-
 
 
 }

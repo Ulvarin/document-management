@@ -25,8 +25,10 @@ import static pl.com.bottega.documentmanagement.utils.Assert.assertDatesEqual;
 
 /**
  * Created by ulvar on 20.08.2016.
- */@RunWith(SpringRunner.class)
-@ContextConfiguration({"/application.xml"})
+ */
+
+@RunWith(SpringRunner.class)
+@ContextConfiguration({"/application.xml", "/test-context.xml"})
 @TestPropertySource({"/jdbc-test.properties", "/hibernate-test.properties"})
 @WebAppConfiguration
 public class DocumentFlowAcceptanceTest {

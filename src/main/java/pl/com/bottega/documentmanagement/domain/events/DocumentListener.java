@@ -9,5 +9,4 @@ public interface DocumentListener {
 
     void published(Document document);
 
-
 }

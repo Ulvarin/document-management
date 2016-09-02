@@ -1,4 +1,4 @@
-package cesarCryptDecorator;
+package funWithJava.cesarCryptDecorator;
 
 import java.io.*;
 
@@ -6,7 +6,6 @@ import java.io.*;
  * Created by ulvar on 27.08.2016.
  */
 public class CMA {
-
 
 
     public static void main(String[] args) throws IOException {
@@ -18,16 +17,15 @@ public class CMA {
         os.close();
 
 
-
         InputStream in = new FileInputStream("C:\\Users\\ulvar\\Documents\\topsecret.txt");
-         //key = -5;
+        //key = -5;
         in = new CesarInputStream(in, key);
-       int  result;
+        int result;
         int b;
         StringBuilder sb = new StringBuilder();
 
-        while((b = in.read()) != -1){
-            sb.append((char)b);
+        while ((b = in.read()) != -1) {
+            sb.append((char) b);
 
 
         }

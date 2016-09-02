@@ -1,6 +1,6 @@
-package pl.com.bottega.documentmanagement.CoffeProjectDecoratorWzorzec.sizes;
+package funWithJava.CoffeProjectDecoratorWzorzec.sizes;
 
-import pl.com.bottega.documentmanagement.CoffeProjectDecoratorWzorzec.Coffe;
+import funWithJava.CoffeProjectDecoratorWzorzec.Coffe;
 
 /**
  * Created by ulvar on 21.08.2016.

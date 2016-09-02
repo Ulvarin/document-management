@@ -1,7 +1,6 @@
 package pl.com.bottega.documentmanagement.api;
 
 
-import org.springframework.stereotype.Component;
 import pl.com.bottega.documentmanagement.domain.Document;
 import pl.com.bottega.documentmanagement.domain.events.DocumentListener;
 
@@ -11,7 +10,6 @@ import java.util.Collection;
 /**
  * Created by ulvar on 27.08.2016.
  */
-
 public class DocumentListenerManager {
 
     private Collection<DocumentListener> listeners;

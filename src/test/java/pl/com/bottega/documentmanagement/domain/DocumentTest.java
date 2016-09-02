@@ -21,6 +21,7 @@ import static pl.com.bottega.documentmanagement.utils.Assert.assertDatesEqual;
 /**
  * Created by ulvar on 31.07.2016.
  */
+
 @RunWith(MockitoJUnitRunner.class)
 public class DocumentTest {
 
@@ -35,8 +36,6 @@ public class DocumentTest {
 
     @Mock
     private PrintCostCalculator printCostCalculator;
-
-
 
     private String anyContent = "test content";
 
@@ -158,10 +157,8 @@ public class DocumentTest {
         assertDatesEqual(new Date(), document.publishedAt());
     }
 
-
-
     @Test
-    public void shouldNotifyAboutPublishing(){
+    public void shouldNotifyAboutPublishing() {
         //given
         Document document = new Document(anyNumber, anyContent, anyTitle, anyEmployee, printCostCalculator);
         document.verify(anyEmployee);
@@ -174,13 +171,10 @@ public class DocumentTest {
         document.publish(anyEmployee, Sets.newHashSet(anyEmployee));
 
         //then
-
         verify(firstListener).published(document);
         verify(secondListener).published(document);
 
-
     }
-
 
     @Test(expected = IllegalArgumentException.class)
     public void shouldNotAllowPublishingForNoEmployees() {
@@ -248,6 +242,5 @@ public class DocumentTest {
         document.confirm(otherEmployee);
 
     }
-
 
 }

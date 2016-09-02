@@ -1,4 +1,4 @@
-package cesarCryptDecorator;
+package funWithJava.cesarCryptDecorator;
 
 import java.io.IOException;
 import java.io.OutputStream;
@@ -8,8 +8,7 @@ import java.io.OutputStream;
  */
 public class CesarOutputStream extends OutputStream {
     private int key;
-    private  OutputStream decorated;
-
+    private OutputStream decorated;
 
 
     public CesarOutputStream(OutputStream decorated, int key) {

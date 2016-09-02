@@ -6,8 +6,6 @@ import pl.com.bottega.documentmanagement.domain.DocumentNumberGenerator;
 import pl.com.bottega.documentmanagement.domain.PrintCostCalculator;
 
 
-
-
 /**
  * Created by ulvar on 20.08.2016.
  */

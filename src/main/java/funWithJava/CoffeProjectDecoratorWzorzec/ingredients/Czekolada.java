@@ -1,7 +1,7 @@
-package pl.com.bottega.documentmanagement.CoffeProjectDecoratorWzorzec.ingredients;
+package funWithJava.CoffeProjectDecoratorWzorzec.ingredients;
 
-import pl.com.bottega.documentmanagement.CoffeProjectDecoratorWzorzec.Coffe;
-import pl.com.bottega.documentmanagement.CoffeProjectDecoratorWzorzec.CoffeDecorator;
+import funWithJava.CoffeProjectDecoratorWzorzec.Coffe;
+import funWithJava.CoffeProjectDecoratorWzorzec.CoffeDecorator;
 
 /**
  * Created by ulvar on 21.08.2016.
