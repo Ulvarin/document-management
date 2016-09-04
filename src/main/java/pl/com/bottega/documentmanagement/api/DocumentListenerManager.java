@@ -19,7 +19,7 @@ public class DocumentListenerManager {
     }
 
     public void subscribeListeners(Document document) {
-        for(DocumentListener dl : listeners)
+        for (DocumentListener dl : listeners)
             document.subscribeDocumentListener(dl);
         //listeners.forEach(document::subscribeDocumentListener);
     }

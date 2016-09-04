@@ -30,7 +30,8 @@ public class Reader {
     @ManyToOne
     private Employee confirmedBy;
 
-    Reader() {}
+    Reader() {
+    }
 
     public Reader(Document document, Employee employee) {
         this.document = document;

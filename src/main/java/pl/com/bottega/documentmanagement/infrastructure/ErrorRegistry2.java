@@ -10,7 +10,7 @@ public class ErrorRegistry2 {
 
     private List<String> errors = new LinkedList<>();
 
-    private ErrorRegistry2() {
+    public ErrorRegistry2() {
         System.out.println("Creating error registry 2");
     }
 

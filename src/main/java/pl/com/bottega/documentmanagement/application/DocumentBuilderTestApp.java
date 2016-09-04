@@ -10,7 +10,8 @@ import pl.com.bottega.documentmanagement.infrastructure.XMLDocumentBuilder;
 
 /**
  * Created by ulvar on 02.09.2016.
- */public class DocumentBuilderTestApp {
+ */
+public class DocumentBuilderTestApp {
 
     public static void main(String[] args) {
         DocumentNumber documentNumber = new DocumentNumber("1");

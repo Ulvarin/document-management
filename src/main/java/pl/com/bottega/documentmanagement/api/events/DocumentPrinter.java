@@ -31,7 +31,7 @@ public class DocumentPrinter implements DocumentListener {
         Set<Reader> readers = document.readers();
         //Set<EmployeeId> employeeIds = readers.stream().map(reader -> reader.employeeId()).collect(Collectors.toSet());
         Set<EmployeeId> employeeIds = new HashSet<>();
-        for(Reader reader : readers)
+        for (Reader reader : readers)
             employeeIds.add(reader.employeeId());
         Set<EmployeeDetails> employeeDetailsSet = hrSystemFacade.getEmployeeDetails(Sets.newHashSet(employeeIds));
         printDocument(document, employeeDetailsSet);

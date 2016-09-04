@@ -10,6 +10,8 @@ public class SingletonTest {
     public static void main(String[] args) {
         System.out.println("Singleton test");
         System.out.println(ErrorRegistry2.class);
+        ErrorRegistry2 errorRegistry2 = new ErrorRegistry2();
+
     }
 
 }
